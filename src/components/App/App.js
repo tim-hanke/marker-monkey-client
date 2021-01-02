@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import PrivateRoute from "../Utils/PrivateRoute";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import ArticleListPage from "../../routes/ArticleListPage/ArticleListPage";
+import LandingPage from "../../routes/LandingPage/LandingPage";
 // import ArticlePage from "../../routes/ArticlePage/ArticlePage";
 import TokenService from "../../services/token-service";
 import LoginPage from "../../routes/LoginPage/LoginPage";
@@ -34,7 +35,7 @@ class App extends Component {
             <p className="red">There was an error! Oh no!</p>
           )}
           <Switch>
-            <Route exact path={"/"} component={ArticleListPage} />
+            <Route exact path={"/"} component={LandingPage} />
             <PublicOnlyRoute
               path={"/login"}
               component={LoginPage}

@@ -1,0 +1,12 @@
+.LandingPage {
+  text-align: center;
+}
+
+.LandingPage a {
+  background: rgb(255, 121, 121);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+}
