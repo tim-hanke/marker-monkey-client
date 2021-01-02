@@ -1,15 +1,18 @@
 import TokenService from "./token-service";
 import config from "../config";
+import STORE from "./dummy-store";
 
 const ArticleApiService = {
   async getArticles() {
+    return STORE.articles;
+    // API version
     // TODO: change /things to /articles
-    const res = await fetch(`${config.API_ENDPOINT}/things`, {
-      headers: {},
-    });
-    return await (!res.ok
-      ? res.json().then((e) => Promise.reject(e))
-      : res.json());
+    // const res = await fetch(`${config.API_ENDPOINT}/things`, {
+    //   headers: {},
+    // });
+    // return await (!res.ok
+    //   ? res.json().then((e) => Promise.reject(e))
+    //   : res.json());
   },
   async getArticle(articleId) {
     const res = await fetch(`${config.API_ENDPOINT}/articles/${articleId}`, {

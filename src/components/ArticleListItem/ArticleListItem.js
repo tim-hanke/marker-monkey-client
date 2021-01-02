@@ -24,7 +24,7 @@ export default class ArticleListItem extends Component {
           <div className="ArticleListItem__text">
             <h2 className="ArticleListItem__title">{article.title}</h2>
             <p className="ArticleListItem__description">
-              {truncate(article.content)}
+              {truncate(article.description)}
             </p>
           </div>
         </div>
