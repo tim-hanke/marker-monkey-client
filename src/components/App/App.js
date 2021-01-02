@@ -35,7 +35,11 @@ class App extends Component {
             <p className="red">There was an error! Oh no!</p>
           )}
           <Switch>
-            <Route exact path={"/"} component={LandingPage} />
+            <Route
+              exact
+              path={"/"}
+              component={this.state.isLoggedIn ? ArticleListPage : LandingPage}
+            />
             <PublicOnlyRoute
               path={"/login"}
               component={LoginPage}
