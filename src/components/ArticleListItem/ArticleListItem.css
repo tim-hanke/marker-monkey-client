@@ -1,0 +1,43 @@
+.ArticleListItem {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  font-size: smaller;
+  text-decoration: none;
+  box-shadow: 0px 6px 11px -3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.ArticleListItem:hover {
+  cursor: pointer;
+}
+
+.ArticleListItem,
+.ArticleListItem:visited {
+  color: #555;
+}
+
+.ArticleListItem__image {
+  height: 150px;
+  width: 275px;
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.ArticleListItem__details {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 255px;
+  text-align: center;
+}
+
+.ArticleListItem__details h2 {
+  margin: 0;
+}
