@@ -42,10 +42,7 @@ class App extends Component {
               componentProps={{ onLogin: this.handleLogInLogOut }}
             />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-            {/* <PrivateRoute
-              path={"/article/:articleId"}
-              component={ArticlePage}
-            /> */}
+            <PrivateRoute path={"/articles"} component={ArticleListPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>
