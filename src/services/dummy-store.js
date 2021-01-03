@@ -42,6 +42,13 @@ const STORE = {
         "https://hashnode.com/utility/r?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1608619713193%2F4C0_uyFry.jpeg%3Fw%3D1200%26h%3D630%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress",
     },
   ],
+  users: [
+    {
+      user_name: "demo",
+      full_name: "Demo Person",
+      password: "Pass123!",
+    },
+  ],
 };
 
 export default STORE;
