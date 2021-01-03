@@ -25,16 +25,20 @@ const AuthApiService = {
     //   : res.json());
   },
   async postUser(user) {
-    const res = await fetch(`${config.API_ENDPOINT}/users`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    return await (!res.ok
-      ? res.json().then((e) => Promise.reject(e))
-      : res.json());
+    // very naive registration to get static client working
+    // without any backend API
+    STORE.users.push(user);
+    // API version
+    // const res = await fetch(`${config.API_ENDPOINT}/users`, {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(user),
+    // });
+    // return await (!res.ok
+    //   ? res.json().then((e) => Promise.reject(e))
+    //   : res.json());
   },
 };
 
