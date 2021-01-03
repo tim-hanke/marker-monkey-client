@@ -9,6 +9,7 @@ import LandingPage from "../../routes/LandingPage/LandingPage";
 import TokenService from "../../services/token-service";
 import LoginPage from "../../routes/LoginPage/LoginPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
+import AddArticlePage from "../../routes/AddArticlePage/AddArticlePage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import "./App.css";
 
@@ -47,6 +48,7 @@ class App extends Component {
             />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
             <PrivateRoute path={"/articles"} component={ArticleListPage} />
+            <PrivateRoute path={"/addarticle"} component={AddArticlePage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

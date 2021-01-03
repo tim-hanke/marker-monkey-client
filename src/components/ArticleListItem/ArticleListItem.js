@@ -9,8 +9,7 @@ export default class ArticleListItem extends Component {
     return (
       <Link
         to={{
-          pathname:
-            "https://catalins.tech/top-5-mistakes-i-made-as-a-junior-developer",
+          pathname: article.url,
         }}
         target="_blank"
         className="ArticleListItem"
