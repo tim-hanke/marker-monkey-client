@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AuthApiService from "../../services/auth-api-service";
+import TokenService from "../../services/token-service";
 import { Button, Input, Required } from "../Utils/Utils";
 
 export default class RegistrationForm extends Component {
@@ -9,31 +10,34 @@ export default class RegistrationForm extends Component {
 
   state = { error: null };
 
-  handleSubmit = (ev) => {
+  handleSubmit = async (ev) => {
     ev.preventDefault();
     const { full_name, user_name, password } = ev.target;
 
     this.setState({ error: null });
 
-    AuthApiService.postUser({
-      full_name: full_name.value,
-      user_name: user_name.value,
-      password: password.value,
-    })
-      .then((user) => {
-        full_name.value = "";
-        user_name.value = "";
-        password.value = "";
-        this.props.onRegistrationSuccess();
-      })
-      .catch((res) => {
-        this.setState({ error: res.error });
+    try {
+      const user = await AuthApiService.postUser({
+        full_name: full_name.value,
+        user_name: user_name.value,
+        password: password.value,
       });
+      const res = await AuthApiService.postLogin(user);
+      if (res.authToken) {
+        TokenService.saveAuthToken(res.authToken);
+      }
+      full_name.value = "";
+      user_name.value = "";
+      password.value = "";
+      this.props.onRegistrationSuccess();
+    } catch (res) {
+      this.setState({ error: res.error });
+    }
 
-    full_name.value = "";
-    user_name.value = "";
-    password.value = "";
-    this.props.onRegistrationSuccess();
+    // full_name.value = "";
+    // user_name.value = "";
+    // password.value = "";
+    // this.props.onRegistrationSuccess();
   };
 
   render() {

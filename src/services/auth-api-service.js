@@ -28,6 +28,8 @@ const AuthApiService = {
     // very naive registration to get static client working
     // without any backend API
     STORE.users.push(user);
+    console.log(`STORE.users: ${STORE.users}`);
+    return user;
     // API version
     // const res = await fetch(`${config.API_ENDPOINT}/users`, {
     //   method: "POST",
