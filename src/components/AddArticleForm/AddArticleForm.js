@@ -15,7 +15,7 @@ export default class AddArticleForm extends Component {
     const { url } = ev.target;
 
     ArticleApiService.postArticle(url.value)
-      .then((res) => {
+      .then((_res) => {
         url.value = "";
         this.props.onAddSuccess();
       })

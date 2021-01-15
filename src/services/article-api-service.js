@@ -1,6 +1,6 @@
 import TokenService from "./token-service";
 import config from "../config";
-import STORE from "./dummy-store";
+// import STORE from "./dummy-store";
 
 const ArticleApiService = {
   async getArticles() {
@@ -28,9 +28,10 @@ const ArticleApiService = {
     //   image: `https://loremflickr.com/750/300/landscape?random=${STORE.articles.length}`,
     // };
     // STORE.articles.push(newArticle);
-    const res = await fetch(`${config.API_ENDPOINT}/articles`, {
+    const res = await fetch(`${config.API_ENDPOINT}/articles/`, {
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`,
+        "Content-Type": "application/json",
       },
       method: "POST",
       body: JSON.stringify({ target_url: articleUrl }),

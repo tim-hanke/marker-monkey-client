@@ -12,7 +12,6 @@ export default class RegistrationPage extends Component {
   handleRegistrationSuccess = (user) => {
     const { location, history } = this.props;
     const destination = (location.state || {}).from || "/articles";
-    console.log(`in handleRegistrationSuccess(): ${destination}`);
     history.push(destination);
 
     // const { history } = this.props
