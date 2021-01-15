@@ -22,7 +22,10 @@ export default class RegistrationForm extends Component {
         user_name: user_name.value,
         password: password.value,
       });
-      const res = await AuthApiService.postLogin(user);
+      const res = await AuthApiService.postLogin({
+        ...user,
+        password: password.value,
+      });
       if (res.authToken) {
         TokenService.saveAuthToken(res.authToken);
       }
