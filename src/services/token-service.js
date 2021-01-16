@@ -1,14 +1,14 @@
-import config from "../config";
+import { TOKEN_KEY } from "../config";
 
 const TokenService = {
   saveAuthToken(token) {
-    window.localStorage.setItem(config.TOKEN_KEY, token);
+    window.localStorage.setItem(TOKEN_KEY, token);
   },
   getAuthToken() {
-    return window.localStorage.getItem(config.TOKEN_KEY);
+    return window.localStorage.getItem(TOKEN_KEY);
   },
   clearAuthToken() {
-    window.localStorage.removeItem(config.TOKEN_KEY);
+    window.localStorage.removeItem(TOKEN_KEY);
   },
   hasAuthToken() {
     return !!TokenService.getAuthToken();

@@ -1,4 +1,4 @@
-import config from "../config";
+import { API_ENDPOINT } from "../config";
 // import STORE from "./dummy-store";
 
 const AuthApiService = {
@@ -15,7 +15,7 @@ const AuthApiService = {
     // }
     // return { authToken: "my-fake-testing-token" };
     // API version
-    const res = await fetch(`${config.API_ENDPOINT}/auth/login`, {
+    const res = await fetch(`${API_ENDPOINT}/auth/login`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(credentials),
@@ -31,7 +31,7 @@ const AuthApiService = {
     // console.log(`STORE.users: ${STORE.users}`);
     // return user;
     // API version
-    const res = await fetch(`${config.API_ENDPOINT}/users`, {
+    const res = await fetch(`${API_ENDPOINT}/users`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
