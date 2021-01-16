@@ -23,7 +23,7 @@
   height: 150px;
   width: 275px;
   border-radius: 10px 10px 0 0;
-  background-size: contain;
+  background-size: cover;
   background-position: 50% 50%;
 }
 
