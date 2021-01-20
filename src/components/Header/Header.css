@@ -1,7 +1,7 @@
 .Header {
   height: 40px;
   display: flex;
-  align-items: normal;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -53,8 +53,28 @@
     align-items: baseline;
   }
 
+  /* .Header h1 {
+    font-size: 20pt;
+  } */
+}
+
+@media screen and (max-width: 405px) {
   .Header h1 {
-    font-size: 22pt;
+    font-size: 20px;
+  }
+
+  .Header__logged-in a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Header h1 {
+    font-size: 18px;
+  }
+
+  .Header .logo {
+    display: none;
   }
 }
 

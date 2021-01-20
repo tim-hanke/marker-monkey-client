@@ -37,7 +37,8 @@ export default class Header extends Component {
         <nav className="Header">
           <h1>
             <Link to="/">
-              <FontAwesomeIcon className="blue" icon={faPaw} /> Marker Monkey
+              <FontAwesomeIcon className="blue logo" icon={faPaw} /> Marker
+              Monkey
             </Link>
           </h1>
           <span className="Header__tagline--wide">
