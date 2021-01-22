@@ -12,11 +12,11 @@
 }
 
 .LandingPage__hint {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .LandingPage__hint span {
   font-family: monospace;
   background-color: lightgrey;
-  opacity: 100%;
+  opacity: 1;
 }
