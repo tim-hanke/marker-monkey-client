@@ -1,8 +1,5 @@
 .ArticleListItem__container {
   position: relative;
-  /* margin: 10px;
-  display: flex;
-  align-items: center; */
   margin-bottom: 40px;
   margin-left: 10px;
   margin-right: 10px;
@@ -12,14 +9,17 @@
   background: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: smaller;
   text-decoration: none;
   box-shadow: 0px 5px 12px -1px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.4s ease-out;
   border-radius: 10px;
 }
 
-.ArticleListItem:hover {
+.ArticleListItem__container:hover .ArticleListItem {
   cursor: pointer;
+  box-shadow: 0px 8px 20px -1px rgba(0, 0, 0, 0.5);
 }
 
 .ArticleListItem,
@@ -31,12 +31,16 @@
   height: 150px;
   width: 275px;
   border-radius: 10px 10px 0 0;
-  background-size: cover;
+  background-size: 100%;
+  transition: background-size 0.4s ease-out;
   background-position: 50% 50%;
 }
 
+.ArticleListItem__container:hover .ArticleListItem__image {
+  background-size: 103%;
+}
+
 .ArticleListItem__delete {
-  /* box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5); */
   background-color: #fff;
   text-align: center;
   height: 30px;
@@ -63,4 +67,55 @@
 
 .ArticleListItem__details h2 {
   margin: 0;
+}
+
+.jiggly:hover,
+.jiggly:focus {
+  -webkit-animation: jiggle-center 0.4s ease-in-out both;
+  animation: jiggle-center 0.4s ease-out both;
+}
+
+@-webkit-keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }

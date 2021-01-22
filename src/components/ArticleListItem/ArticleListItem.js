@@ -54,7 +54,7 @@ export default class ArticleListItem extends Component {
           <div role="alert">{error && <p>{error}</p>}</div>
         </Link>
         <button
-          className="ArticleListItem__delete"
+          className="ArticleListItem__delete jiggly"
           onClick={this.handleClickDelete}
         >
           <FontAwesomeIcon className="logo" icon={faTrashAlt} />

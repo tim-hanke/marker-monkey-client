@@ -52,10 +52,6 @@
   .Header {
     align-items: baseline;
   }
-
-  /* .Header h1 {
-    font-size: 20pt;
-  } */
 }
 
 @media screen and (max-width: 405px) {
@@ -85,5 +81,56 @@
 
   .Header__tagline--narrow {
     display: inherit;
+  }
+}
+
+.jiggly:hover,
+.jiggly:focus {
+  -webkit-animation: jiggle-center 0.4s ease-in-out both;
+  animation: jiggle-center 0.4s ease-out both;
+}
+
+@-webkit-keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
