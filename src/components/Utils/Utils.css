@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 .Hyph {
   margin-right: 5px;
@@ -35,7 +38,7 @@
 }
 
 .Required {
-  color: #CA1551;
+  color: #ca1551;
   font-family: Arial;
   font-weight: bold;
 }
