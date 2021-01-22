@@ -17,9 +17,9 @@ export default class ArticleListPage extends Component {
 
   renderArticles() {
     const { articleList = [] } = this.context;
-    return articleList.map((article) => (
-      <ArticleListItem key={article.id} article={article} />
-    ));
+    return articleList
+      .sort((a, b) => (a.id < b.id ? 1 : -1))
+      .map((article) => <ArticleListItem key={article.id} article={article} />);
   }
 
   render() {
