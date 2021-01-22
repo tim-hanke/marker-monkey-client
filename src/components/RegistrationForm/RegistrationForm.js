@@ -33,8 +33,8 @@ export default class RegistrationForm extends Component {
       user_name.value = "";
       password.value = "";
       this.props.onRegistrationSuccess();
-    } catch (res) {
-      this.setState({ error: res.error });
+    } catch (err) {
+      this.setState({ error: err.message });
     }
 
     // full_name.value = "";

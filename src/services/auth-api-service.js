@@ -3,18 +3,6 @@ import { API_ENDPOINT } from "../config";
 
 const AuthApiService = {
   async postLogin(credentials) {
-    // const dbUser = STORE.users.find(
-    //   (u) => u.user_name === credentials.user_name
-    // );
-    // if (!dbUser) {
-    //   return { error: "Incorrect user_name or password" };
-    // }
-    // const passwordMatch = dbUser.password === credentials.password;
-    // if (!passwordMatch) {
-    //   return { error: "Incorrect user_name or password" };
-    // }
-    // return { authToken: "my-fake-testing-token" };
-    // API version
     const res = await fetch(`${API_ENDPOINT}/auth/login`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -25,12 +13,6 @@ const AuthApiService = {
       : res.json());
   },
   async postUser(user) {
-    // very naive registration to get static client working
-    // without any backend API
-    // STORE.users.push(user);
-    // console.log(`STORE.users: ${STORE.users}`);
-    // return user;
-    // API version
     const res = await fetch(`${API_ENDPOINT}/users`, {
       method: "POST",
       headers: {

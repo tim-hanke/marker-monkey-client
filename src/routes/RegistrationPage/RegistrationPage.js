@@ -13,9 +13,7 @@ export default class RegistrationPage extends Component {
     const { location, history } = this.props;
     const destination = (location.state || {}).from || "/articles";
     history.push(destination);
-
-    // const { history } = this.props
-    // history.push('/login')
+    this.props.onLogin();
   };
 
   render() {
