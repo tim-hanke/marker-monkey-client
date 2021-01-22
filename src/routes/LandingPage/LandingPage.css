@@ -10,3 +10,13 @@
   margin-left: 10px;
   text-decoration: none;
 }
+
+.LandingPage__hint {
+  opacity: 50%;
+}
+
+.LandingPage__hint span {
+  font-family: monospace;
+  background-color: lightgrey;
+  opacity: 100%;
+}

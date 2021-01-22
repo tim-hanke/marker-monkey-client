@@ -11,6 +11,10 @@ export default class LandingPage extends Component {
           A place to store all the things you just don't have time to read now.
         </h2>
         <Link to="/register">Register</Link>
+        <p className="LandingPage__hint">
+          Hint: you can also login with <span>demo/Pass123!</span> to try it
+          out!
+        </p>
       </Section>
     );
   }
