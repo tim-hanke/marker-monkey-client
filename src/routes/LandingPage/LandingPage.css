@@ -20,3 +20,13 @@
   background-color: lightgrey;
   opacity: 1;
 }
+
+.LandingPage__login {
+  background: rgb(255, 121, 121);
+  color: white;
+  border: 0px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+}
