@@ -26,21 +26,14 @@ export default class RegistrationForm extends Component {
         ...user,
         password: password.value,
       });
-      if (res.authToken) {
-        TokenService.saveAuthToken(res.authToken);
-      }
+      TokenService.saveAuthToken(res.authToken);
       full_name.value = "";
       user_name.value = "";
       password.value = "";
       this.props.onRegistrationSuccess();
     } catch (err) {
-      this.setState({ error: err.message });
+      this.setState({ error: err.error });
     }
-
-    // full_name.value = "";
-    // user_name.value = "";
-    // password.value = "";
-    // this.props.onRegistrationSuccess();
   };
 
   render() {

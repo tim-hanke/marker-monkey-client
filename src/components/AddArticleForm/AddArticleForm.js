@@ -7,11 +7,11 @@ export default class AddArticleForm extends Component {
     onAddSuccess: () => {},
   };
 
-  state = { error: null };
+  state = { error: null, isFetching: false };
 
   handleSubmitUrl = (ev) => {
     ev.preventDefault();
-    this.setState({ error: null });
+    this.setState({ error: null, isFetching: true });
     const { url } = ev.target;
 
     ArticleApiService.postArticle(url.value)
@@ -20,20 +20,26 @@ export default class AddArticleForm extends Component {
         this.props.onAddSuccess();
       })
       .catch((res) => {
-        this.setState({ error: res.error });
+        this.setState({ error: res.error, isFetching: false });
       });
   };
 
   render() {
-    const { error } = this.state;
+    const { error, isFetching } = this.state;
     return (
       <form className="AddArticleForm" onSubmit={this.handleSubmitUrl}>
-        <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="url">
           <label htmlFor="AddArticleForm__url">URL</label>
           <Input required name="url" id="AddArticleForm__url"></Input>
         </div>
-        <Button type="submit">Submit URL</Button>
+        {error && (
+          <div role="alert">
+            <p className="red">{error}</p>
+          </div>
+        )}
+        <Button type="submit">
+          {isFetching ? "Getting URL" : "Submit URL"}
+        </Button>
       </form>
     );
   }

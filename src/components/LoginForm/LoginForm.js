@@ -20,17 +20,13 @@ export default class LoginForm extends Component {
       password: password.value,
     })
       .then((res) => {
-        if (res.authToken) {
-          user_name.value = "";
-          password.value = "";
-          TokenService.saveAuthToken(res.authToken);
-          this.props.onLoginSuccess();
-        } else {
-          throw new Error(res.error);
-        }
+        user_name.value = "";
+        password.value = "";
+        TokenService.saveAuthToken(res.authToken);
+        this.props.onLoginSuccess();
       })
       .catch((err) => {
-        this.setState({ error: err.message });
+        this.setState({ error: err.error });
       });
   };
 
@@ -58,7 +54,11 @@ export default class LoginForm extends Component {
             placeholder="Pass123!"
           ></Input>
         </div>
-        <div role="alert">{error && <p className="red">{error}</p>}</div>
+        {error && (
+          <div role="alert">
+            <p className="red">{error}</p>
+          </div>
+        )}
         <Button type="submit">Login</Button>
       </form>
     );
