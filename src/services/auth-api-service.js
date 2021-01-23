@@ -1,5 +1,4 @@
 import { API_ENDPOINT } from "../config";
-// import STORE from "./dummy-store";
 
 const AuthApiService = {
   async postLogin(credentials) {
