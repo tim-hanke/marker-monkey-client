@@ -35,12 +35,6 @@ class App extends Component {
             <p className="red">There was an error! Oh no!</p>
           )}
           <Switch>
-            {/* <Route
-              exact
-              path={"/"}
-              component={this.state.isLoggedIn ? ArticleListPage : LandingPage}
-              componentProps={{ onLogin: this.handleLogInLogOut }}
-            /> */}
             {this.state.isLoggedIn ? (
               <Route exact path={"/"} component={ArticleListPage} />
             ) : (
