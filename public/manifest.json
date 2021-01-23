@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Marker Monkey",
+  "name": "Marker Monkey Web App",
   "icons": [
     {
       "src": "favicon.ico",
