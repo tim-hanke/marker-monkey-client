@@ -1,6 +1,7 @@
 # Marker Monkey
 
-_screenshot goes here_
+![Mockup-greybackground](https://user-images.githubusercontent.com/64292589/105615134-39be8280-5d9c-11eb-968e-7f07afe28312.png)
+
 
 This is the client side of Marker Monkey, a bookmarking web app.
 
