@@ -51,7 +51,11 @@ export default class ArticleListItem extends Component {
               </p>
             </div>
           </div>
-          <div role="alert">{error && <p>{error}</p>}</div>
+          {error && (
+            <div role="alert">
+              <p>{error}</p>
+            </div>
+          )}
         </Link>
         <button
           className="ArticleListItem__delete jiggly"

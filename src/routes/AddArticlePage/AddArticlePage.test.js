@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { MemoryRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
-import App from "./App";
+import AddArticlePage from "./AddArticlePage";
 
-describe("App component", () => {
+describe("AddArticlePage component", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <App />
+        <AddArticlePage />
       </MemoryRouter>,
       div
     );
@@ -20,19 +20,10 @@ describe("App component", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <App />
+          <AddArticlePage />
         </MemoryRouter>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
-
-// import { render, screen } from "@testing-library/react";
-// import App from "./App";
-
-// test.skip("renders learn react link", () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
