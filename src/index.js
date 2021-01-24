@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import * as serviceWorker from "./serviceWorker";
 import { ArticleListProvider } from "./contexts/ArticleListContext";
 import { ArticleProvider } from "./contexts/ArticleContext";
 import App from "./components/App/App";
@@ -17,5 +16,3 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
-
-serviceWorker.unregister();
