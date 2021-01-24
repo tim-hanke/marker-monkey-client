@@ -60,6 +60,8 @@ export default class ArticleListItem extends Component {
         <button
           className="ArticleListItem__delete jiggly"
           onClick={this.handleClickDelete}
+          aria-label="delete button"
+          title="delete button"
         >
           <FontAwesomeIcon className="logo" icon={faTrashAlt} />
         </button>
