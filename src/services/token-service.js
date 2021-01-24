@@ -16,10 +16,6 @@ const TokenService = {
   hasValidAuthToken() {
     // TODO check for a valid auth token
   },
-
-  makeBasicAuthToken(userName, password) {
-    return window.btoa(`${userName}:${password}`);
-  },
 };
 
 export default TokenService;

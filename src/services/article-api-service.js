@@ -38,16 +38,6 @@ const ArticleApiService = {
       ? res.json().then((e) => Promise.reject(e))
       : res.json());
   },
-  async getArticle(articleId) {
-    const res = await fetch(`${API_ENDPOINT}/articles/${articleId}`, {
-      headers: {
-        Authorization: `bearer ${TokenService.getAuthToken()}`,
-      },
-    });
-    return await (!res.ok
-      ? res.json().then((e) => Promise.reject(e))
-      : res.json());
-  },
 };
 
 export default ArticleApiService;
