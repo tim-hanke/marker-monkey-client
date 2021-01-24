@@ -8,6 +8,7 @@ exports[`ArticleListItem component renders the UI as expected 1`] = `
     className="ArticleListItem"
     href="https://www.test1.com"
     onClick={[Function]}
+    rel="noopener noreferrer"
     target="_blank"
   >
     <div
@@ -38,8 +39,10 @@ exports[`ArticleListItem component renders the UI as expected 1`] = `
     </div>
   </a>
   <button
+    aria-label="delete button"
     className="ArticleListItem__delete jiggly"
     onClick={[Function]}
+    title="delete button"
   >
     <svg
       aria-hidden="true"
