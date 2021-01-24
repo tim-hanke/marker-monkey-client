@@ -37,6 +37,7 @@ export default class ArticleListItem extends Component {
           }}
           target="_blank"
           className="ArticleListItem"
+          rel="noopener noreferrer"
         >
           <div
             className="ArticleListItem__image"
