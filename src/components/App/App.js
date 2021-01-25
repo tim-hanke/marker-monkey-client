@@ -20,6 +20,8 @@ class App extends Component {
     return { hasError: true };
   }
 
+  // to update when to display Add Article & Logout
+  // or Login & Register links in Header
   handleLogInLogOut = () => {
     this.setState({ isLoggedIn: TokenService.hasAuthToken() });
   };

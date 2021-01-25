@@ -15,6 +15,8 @@ export default class LandingPage extends Component {
 
   state = { error: null };
 
+  // I put in a button that one-click logs into the demo account
+  // to reduce the friction of someone wanting to try out Marker Monkey
   handleDemoLogin = async () => {
     this.setState({ error: null });
 

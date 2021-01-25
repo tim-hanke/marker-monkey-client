@@ -36,6 +36,8 @@
   background-position: 50% 50%;
 }
 
+/* this does a small zoom in on the article image to
+create the illusion of the focused item coming towards the user */
 .ArticleListItem__container:hover .ArticleListItem__image {
   background-size: 103%;
 }
@@ -69,6 +71,8 @@
   margin: 0;
 }
 
+/* a little animation that "jiggles" the element*/
+/* it goes back and forth, like in traditional animation */
 .jiggly:hover,
 .jiggly:focus {
   -webkit-animation: jiggle-center 0.4s ease-in-out both;

@@ -11,6 +11,11 @@ export default class Header extends Component {
     this.props.onLogout();
   };
 
+  // conditionally renders links depending on if an authToken exists
+  // the UI doesn't check whether or not the authToken is valid
+  // only the backend checks validity, if a reuest is made that
+  // requires it
+
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
